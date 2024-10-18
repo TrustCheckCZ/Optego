@@ -6,7 +6,7 @@ import re
 import time
 
 @register_plugin
-class GravatarPlugin(Plugin):
+class KikEmailResolver(Plugin):
     plugin_type = 'username'
 
     def run(self, username):
@@ -51,6 +51,8 @@ class GravatarPlugin(Plugin):
                     if email:
                         Logger.info('Recovered Kik.com email')
                         PrintUtil.prettify({'Recovery Email': email})
+
+                        return {'Recovery Email': email}
                     else:
                         Logger.warning('No email found')
 

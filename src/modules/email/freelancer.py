@@ -15,6 +15,8 @@ class FreeLancerRecoveryPlugin(Plugin):
                 Logger.info('Deactivated freelancer.com account found')
                 PrintUtil.prettify({'User ID': _type.get('user_id')})
 
+                return {'User ID': _type.get('user_id')}
+
     @classmethod
     def check(cls):
         return True  # Replace with actual check logic

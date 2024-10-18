@@ -20,6 +20,8 @@ class GravatarPlugin(Plugin):
             user.pop('requestHash')
 
             PrintUtil.prettify(user)
+
+            return user
         except Exception as e:
             Logger.error(f'Failed to grab gravatar infomation, {e}')
                 

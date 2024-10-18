@@ -16,7 +16,7 @@ def register_plugin(cls):
     return cls
 
 class Plugin:
-    plugin_type = None  # This will be overridden by subclasses don't remove
+    plugin_type = None
 
     def __init__(self):
         pass

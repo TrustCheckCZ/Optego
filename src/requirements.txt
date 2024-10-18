@@ -1,0 +1,13 @@
+beautifulsoup4==4.12.3
+cfscrape==2.1.1
+DrissionPage==4.1.0.7
+DrissionPage==4.1.0.10
+fake_headers==1.0.2
+fastapi==0.115.2
+httpx==0.27.2
+pydantic==2.9.2
+PyVirtualDisplay==3.0
+Requests==2.32.3
+trio==0.25.0
+urllib3==1.26.14
+uvicorn==0.32.0

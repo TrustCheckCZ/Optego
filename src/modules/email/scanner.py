@@ -187,6 +187,8 @@ class SiteScan(Plugin):
             if account_count > 0:
                 Logger.info(f'Found {account_count} registered accounts')
                 PrintUtil.prettify(accounts)
+
+                return accounts
                 
         async def main(email):
             modules = import_submodules("holehe.modules")

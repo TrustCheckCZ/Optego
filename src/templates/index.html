@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin Runner</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Cytoscape.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.21.1/cytoscape.min.js"></script>
+
+    <style>
+        #cy {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            border-radius: 8px;  /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .card {
+            border-radius: 8px; /* Rounded corners for cards */
+        }
+
+        .card-title {
+            font-size: 1.25rem; /* Larger font for title */
+            font-weight: bold; /* Bold title */
+        }
+
+        .card-text {
+            font-size: 0.9rem; /* Slightly smaller font for text */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Run Plugin</h1>
+
+        <!-- Form -->
+        <form id="plugin-form" class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="plugin_type" class="form-label">Plugin Type:</label>
+                <input type="text" id="plugin_type" name="plugin_type" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="target" class="form-label">Target:</label>
+                <input type="text" id="target" name="target" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Run Plugin</button>
+        </form>
+
+        <!-- Result Section -->
+        <h2 class="text-center mt-5">Result</h2>
+        <div id="result" class="row mt-3"></div>
+
+        <!-- Chart Section -->
+        <h2 class="text-center mt-5">Data Visualization</h2>
+        <canvas id="resultChart"></canvas>
+
+        <!-- Graph Section -->
+        <h2 class="text-center mt-5">Node Graph Visualization</h2>
+        <div id="cy"></div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="/static/main.js"></script>
+</body>
+
+</html>

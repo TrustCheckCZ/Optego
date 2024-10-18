@@ -14,9 +14,14 @@ class ProtonVPNPlugin(Plugin):
                 if ip_address == host.get('EntryIP'):
                     Logger.warning(f"This IP is an entry node for ProtonVPN | {server.get('Location')}")
                     PrintUtil.prettify(server)
+                    
+                    return server
+
                 if ip_address == host.get('ExitIP'):
                     Logger.warning(f"This IP is an entry node for ProtonVPN | {server.get('Location')}")
                     PrintUtil.prettify(server)
+
+                    return server
 
     @classmethod
     def check(cls):

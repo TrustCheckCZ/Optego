@@ -72,5 +72,7 @@ class TwitterRecoveryPlugin(Plugin):
             Logger.info(f"Found recovery info from twitter.com")
             PrintUtil.prettify(output)
 
+            return output
+
         except Exception as e:
             Logger.error(f"An error occurred: {str(e)}")

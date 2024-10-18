@@ -47,6 +47,8 @@ class ProtonPlugin(Plugin):
 
         PrintUtil.prettify(output)
 
+        return output
+
     @classmethod
     def check(cls):
         return True  # Replace with actual check logic
